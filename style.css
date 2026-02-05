@@ -1,0 +1,24 @@
+
+
+main section{
+    text-align: center;
+}
+
+main svg{
+    width: 50%;
+    height: auto;
+    fill: grey;
+    * {
+        transform-box: fill-box;
+        transform-origin: center;
+    }
+}
+
+.hover-district {
+    transition: 1s;
+}
+
+.hover-district:hover {
+    fill: var(--hover-color);
+    transform: scale(1.15);
+}
