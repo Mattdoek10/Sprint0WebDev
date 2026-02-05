@@ -1,28 +1,3 @@
-// const districten = document.querySelectorAll('.hover-district');
-
-// districten.forEach (function(district) {
-//     district.addEventListener('click', () {
-//         district.classList.toggle('toon-info');
-//     })
-// });
-//````````````````````````````
-
-// const districten = document.querySelectorAll('.hover-district');
-
-// districten.forEach(district => {
-//     district.addEventListener('click', wijsInfo);
-// });
-
-// //districten.addEventListener('click', wijsInfo);
-
-// function wijsInfo() {
-
-//     var districtinfo = this.getAttribute('data-info');
-//     document.querySelector('.info-text').innerHTML = districtinfo;
-//     district.classList.toggle('toon-info');
-// }
-
-// -----------------------------
 
 const SRSI = document.querySelector("#SRSI");
 const SRNI = document.querySelector("#SRNI");

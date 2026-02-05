@@ -18,3 +18,14 @@ Wat heb ik geleerd? ik heb meer geleerd hoe ik api uit een database kan halen, e
 
 Wat ga ik morgen doen? Morgen ga ik me website beter laten werken, door de website paths klikbaar te maken, zodat ik informatie aan de rechterkant krijg.
 
+### Daily check out 05/02/2026
+
+Wat heb ik vandaag gedaan? 
+ik heb vandaag de workshop gevolgd over HTML, dus hoe ik beter kan leren werken met forms etc. Wat ik heb geleerd is, hoe ik een form beter kan schrijven in html met descrption list. Ook wat er hoort in de head en hoe alles zo'n beetje werkt. Vervolgens heb ik me website klikbaar gemaakt. dus als er op een district word geklikt wijst het meer info beneden.
+
+Hoeveel tijd heeft me dat gekost? Dit heeft me ongeveer 4 uren gekost, om mijn svg klikbaar te laten maken.
+
+Wat heb ik geleerd? ik heb meer geleerd hoe ik me website klikbaar kan maken, dus de svg zelf. En hoe ik beter forms kan maken.
+
+Wat ga ik morgen doen? Morgen ga ik me website beter laten werken, door de website paths klikbaar te maken, zodat ik informatie aan de rechterkant krijg.text aanpassen, de text laten werken. en met api mijn info laten zien op de desbetreffende knop die gedrukt word.
+bronnen: 
