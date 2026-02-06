@@ -1,4 +1,21 @@
 
+
+const titel = document.querySelector("h1")
+    tekstInvoegen()
+
+    async function tekstInvoegen (){
+      
+      const URL = "https://fdnd.directus.app/items/person/309"
+
+      let response = await fetch(URL)
+
+      let gegevensPersonen = await response.json()
+
+      titel.textContent = gegevensPersonen.data.name
+
+      
+    }
+
 const SRSI = document.querySelector("#SRSI");
 const SRNI = document.querySelector("#SRNI");
 const SRMA = document.querySelector("#SRMA");
@@ -12,6 +29,7 @@ const SRBR = document.querySelector("#SRBR");
 
 const infoTekst = document.querySelector(".info-text");
 const infoTitle = document.querySelector(".info-title");
+const infoImg = document.querySelector(".info-img");
 
 
 SRSI.addEventListener("click", toonSipaliwini);
@@ -26,13 +44,15 @@ SRPR.addEventListener("click", toonPara);
 SRBR.addEventListener("click", toonBrokopondo);
 
 function toonSipaliwini() {
-    infoTitle.innerHTML = "Test";
-    infoTekst.innerHTML = "Bombo - Grootste district";
+    infoTitle.innerHTML = "Mijn Gegevens";
+    infoTekst.innerHTML = "Ik ben Matthew, 22 jaar, woonachtig in Amsterdam, Noord-Holland. Ik ben een beginnende UX/UI-designer en front-end developer met passie voor interactieve interfaces."
+    infoImg.src = "https://www.mamp.one/wp-content/uploads/2024/09/image-resources2.jpg" ;
 }
 
 function toonNickerie() {
     infoTitle.innerHTML = "nickerie";
     infoTekst.innerHTML = "Nickerie - Rijstproducent";
+    infoImg.src = "https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg";
 }
 
 function toonMarowijne() {
@@ -43,6 +63,7 @@ function toonMarowijne() {
 function toonCoronie() {
     infoTitle.innerHTML = "Coronie";
     infoTekst.innerHTML = "Coronie - Westgrens";
+    infoImg.src = "https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg";
 }
 
 function toonSaramacca() {
@@ -51,8 +72,9 @@ function toonSaramacca() {
 }
 
 function toonWanica() {
-    infoTitle.innerHTML = "Wanica";
-    infoTekst.innerHTML = "Wanica - Noordgrens";
+    infoTitle.innerHTML = "Mijn Gegevens";
+    infoTekst.innerHTML = "Ik ben Matthew, 22 jaar, woonachtig in Amsterdam, Noord-Holland. Ik ben een beginnende UX/UI-designer en front-end developer met passie voor interactieve interfaces."
+    infoImg.src = "https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg";
 }
 
 function toonParamaribo() {

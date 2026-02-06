@@ -34,6 +34,12 @@ main svg{
     fill: var(--hover-color);
     transform: scale(1.15);
 }
+
+.onClickhover-district {
+    fill: var(--hover-color);
+    transform: scale(1.15);
+}
+
 main section:nth-of-type(1) path:hover{
     stroke: black;
     stroke-width: 5px;
@@ -42,8 +48,19 @@ main section:nth-of-type(1) path:hover{
 main section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     background-color: antiquewhite;
     border-radius: 1em;
     margin-top: 2em;
+    padding: 1em 1em;
+}
+
+.info-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+
+main section:nth-of-type(2) h2 {
 }
