@@ -1,6 +1,11 @@
 
+* {
+    box-sizing: border-box;
+}
 
-
+img {
+    max-width: 100%;
+}
 
 main{
     display: flex;
@@ -56,11 +61,30 @@ main section:nth-of-type(2) {
 }
 
 .info-img {
-    width: 100%;
+    width: 15em;
     height: auto;
     border-radius: 1em;
     margin-top: 1em;
 }
 
-main section:nth-of-type(2) h2 {
+main section:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+main section:nth-of-type(2) ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+}
+
+main section:nth-of-type(2) ul img{
+    width: 10em;
+    height: 10em;
+    border-radius: 0.3em;
+    object-fit: cover; /* Belangrijkste eigenschap: vult de box */
+    object-position: center; /* Zorgt dat het midden van de afbeelding wordt getoond */
 }
