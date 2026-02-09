@@ -29,3 +29,20 @@ Wat heb ik geleerd? ik heb meer geleerd hoe ik me website klikbaar kan maken, du
 
 Wat ga ik morgen doen? Morgen ga ik me website beter laten werken, door de website paths klikbaar te maken, zodat ik informatie aan de rechterkant krijg.text aanpassen, de text laten werken. en met api mijn info laten zien op de desbetreffende knop die gedrukt word.
 bronnen: 
+
+
+
+### Daily check out 09/02/2026
+Wat heb ik vandaag gedaan? 
+ik heb vandaag de workshop gevolgd over fetchen en filtering en sorting van Sanna. Hierna ben ik aan de slag gegaan met me website. ik heb me gegevens ingevuld in me webswite, dus als je op een district klik geef hij steeds ander info. Daarna probeerde ik mijn svg een video als background te geven met de rand van de svg. dat lukte mij niet.
+
+Hoeveel tijd heeft me dat gekost? de workshop was ongeveer 1.3 uur gekost. en aan me website zelf ongeveer 3-4 uren.
+
+Wat heb ik geleerd? ik heb meer geleerd over hoe ik de fetch and sorting en filtering beter kan doen, en hoe ik dit kan gebruiken om gegevens op te halen van studenten voor mijn eigen website.
+
+Wat ga ik morgen doen? Morgen ga ik me website compleet maken qua info in me text, en het ook stijl geven, en me dark and light mode toevoegen.
+
+bronnen;
+https://secure.kwaliteitsregisterparamedici.nl/lists/nieuws/artikel.aspx?Id=171&Source=/nieuws
+https://nl.vecteezy.com/video/10248662-republiek-van-suriname-realistische-zwaaiende-vlag-gladde-naadloze-loop-4k-video
+https://www.google.com/imgres?q=music&imgurl=https%3A%2F%2Fwww.pianoemporium.com%2Fwp-content%2Fuploads%2F2019%2F03%2Fmusic-keyboard-technology-guitar-concert-piano-1108329-pxhere.com_-800x600.jpg&imgrefurl=https%3A%2F%2Fwww.pianoemporium.com%2F7-free-music-theory-websites-we-recommend%2F&docid=Tl1hb8mozsApWM&tbnid=OI7esvu4obO9NM&vet=12ahUKEwigj_2YrcySAxXkYEEAHRwjKwcQnPAOegQISBAB..i&w=800&h=600&hcb=2&ved=2ahUKEwigj_2YrcySAxXkYEEAHRwjKwcQnPAOegQISBAB

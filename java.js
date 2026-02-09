@@ -1,20 +1,21 @@
 
 
 const titel = document.querySelector("h1")
-    tekstInvoegen()
+const bgVideo = document.getElementById("bgVideo")
 
-    async function tekstInvoegen (){
-      
-      const URL = "https://fdnd.directus.app/items/person/309"
+tekstInvoegen()
 
-      let response = await fetch(URL)
+async function tekstInvoegen (){
+  const URL = "https://fdnd.directus.app/items/person/309"
+  let response = await fetch(URL)
+  let gegevensPersonen = await response.json()
+  titel.textContent = gegevensPersonen.data.name
+}
 
-      let gegevensPersonen = await response.json()
-
-      titel.textContent = gegevensPersonen.data.name
-
-      
-    }
+// Video: play on load (stays playing always)
+if (bgVideo) {
+  bgVideo.play()
+}
 
 const SRSI = document.querySelector("#SRSI");
 const SRNI = document.querySelector("#SRNI");
