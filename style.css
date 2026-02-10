@@ -74,7 +74,9 @@ main svg{
 
 .onClickhover-district {
     fill: var(--hover-color);
-    transform: scale(1.15);
+    stroke: black;
+    stroke-width: 3px;
+    /* transform: scale(1.15); */
 }
 
 main section:nth-of-type(1) path:hover{

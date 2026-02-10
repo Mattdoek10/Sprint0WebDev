@@ -141,3 +141,24 @@ async function loadOneStudent(url) {
     }
 }
 
+
+// Zoek alle gebieden (paths) in de SVG
+const gebieden = document.querySelectorAll("svg path");
+
+// Loop door elk gebied heen
+gebieden.forEach(function(gebied) {
+
+    // Wacht tot er op een gebied wordt geklikt
+    gebied.addEventListener("click", function() {
+
+        // Verwijder de actieve klasse van alle gebieden
+        gebieden.forEach(function(gebied) {
+            gebied.classList.remove("onClickhover-district");
+        });
+
+        // Voeg de actieve klasse toe aan het aangeklikte gebied
+        gebied.classList.add("onClickhover-district");
+    });
+
+});
+
