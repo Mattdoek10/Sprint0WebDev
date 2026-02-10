@@ -1,7 +1,6 @@
 
 
 const titel = document.querySelector("h1")
-const bgVideo = document.getElementById("bgVideo")
 
 tekstInvoegen()
 
@@ -12,10 +11,7 @@ async function tekstInvoegen (){
   titel.textContent = gegevensPersonen.data.name
 }
 
-// Video: play on load (stays playing always)
-if (bgVideo) {
-  bgVideo.play()
-}
+
 
 const SRSI = document.querySelector("#SRSI");
 const SRNI = document.querySelector("#SRNI");
@@ -60,8 +56,9 @@ function toonNickerie() {
 }
 
 function toonMarowijne() {
-    infoTitle.innerHTML = "Marowijne";
-    infoTekst.innerHTML = "Marowijne - Oostgrens";
+    infoTitle.innerHTML = "Mijn Gegevens";
+    infoTekst.innerHTML = "Ik ben Matthew, 22 jaar, woonachtig in Amsterdam, Noord-Holland. Ik ben een beginnende UX/UI-designer en front-end developer met passie voor interactieve interfaces."
+    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4" ;
     infoUL.innerHTML = "<li></li>"
 }
 
@@ -94,9 +91,11 @@ function toonParamaribo() {
 }
 
 function toonCommewijne() {
-    infoTitle.innerHTML = "Commewijne";
-    infoTekst.innerHTML = "Commewijne - Midden";
-    infoUL.innerHTML = "<li></li>"
+    infoImg.src = " ";
+    infoTitle.innerHTML = "Mijn hobbies";
+    infoTekst.innerHTML = "Mijn hobbies zijn gamen, reizen, koken en muziek luisteren. Ik geniet ervan om nieuwe culturen te ontdekken en mijn creativiteit te uiten door middel van design en development.";
+    infoUL.innerHTML = "<li><img src=\"https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg\" alt=\"foto van console\"></li><li><img src=\"https://www.globaljobbing.nl/wp-content/uploads/2024/11/reizen-1024x683.webp\" alt=\"foto van reisen\"></li><li><img src=https://cvofocus.be/wp-content/uploads/2019/05/koken-12.jpg alt=\"foto van koken\"></li><li><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BdjaPumQC-Wg3MPMf9L2V1zQNQk-IXf9mg&s alt=\"foto van muziek\"></li>";
+    
 }
 
 function toonPara() {
@@ -110,7 +109,35 @@ function toonPara() {
 }
 
 function toonBrokopondo() {
-    infoTitle.innerHTML = "Student Gegevens";
-    infoTekst.innerHTML = "Brokopondo - Noordwest";
-    infoUL.innerHTML = "<li></li>"
+    infoTitle.innerHTML = "Studenten Gegevens";
+    infoTekst.innerHTML = "";
+    infoUL.innerHTML = "";
+    infoImg.src = "";
+
+    const base = "https://fdnd.directus.app/items"
+    let eindpoint = "/person?filter[squads][squad_id][tribe][name]=CMD%20Minor%20Web%20Dev&filter[squads][squad_id][cohort]=2526"
+    let url = base + eindpoint
+
+    loadOneStudent(url)
 }
+
+async function loadOneStudent(url) {
+    let response = await fetch(url)
+    let responseJSON = await response.json()
+    let deMinorMensen = responseJSON.data
+    console.log(deMinorMensen)
+
+    if (deMinorMensen.length > 0) {
+        let randomPersoon = Math.floor(Math.random() * deMinorMensen.length)
+        let eenMinorMens = deMinorMensen[randomPersoon]
+        console.log(eenMinorMens)
+
+        let minorMensenHTML = `
+        <li>
+            <h3>${eenMinorMens.name}</h3>
+            <img src="${eenMinorMens.avatar}" alt="avatar van ${eenMinorMens.name}">
+        </li>`
+        infoUL.insertAdjacentHTML("beforeend", minorMensenHTML)
+    }
+}
+
