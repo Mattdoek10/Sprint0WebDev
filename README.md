@@ -46,3 +46,20 @@ bronnen;
 https://secure.kwaliteitsregisterparamedici.nl/lists/nieuws/artikel.aspx?Id=171&Source=/nieuws
 https://nl.vecteezy.com/video/10248662-republiek-van-suriname-realistische-zwaaiende-vlag-gladde-naadloze-loop-4k-video
 https://www.google.com/imgres?q=music&imgurl=https%3A%2F%2Fwww.pianoemporium.com%2Fwp-content%2Fuploads%2F2019%2F03%2Fmusic-keyboard-technology-guitar-concert-piano-1108329-pxhere.com_-800x600.jpg&imgrefurl=https%3A%2F%2Fwww.pianoemporium.com%2F7-free-music-theory-websites-we-recommend%2F&docid=Tl1hb8mozsApWM&tbnid=OI7esvu4obO9NM&vet=12ahUKEwigj_2YrcySAxXkYEEAHRwjKwcQnPAOegQISBAB..i&w=800&h=600&hcb=2&ved=2ahUKEwigj_2YrcySAxXkYEEAHRwjKwcQnPAOegQISBAB
+
+### Daily check out 10/02/2026
+Wat heb ik vandaag gedaan? 
+ik heb vandaag de workshop gevolgd over typografie, ik heb een en ander geleerd over de regels van typografie en waarop ik moet letten. daanra werd er verteld over masking. dit had ik namelijk gevraagd want ik wou het in me website doen. dus vasilis wees ons hoe dat moet en ik heb dat nagekeken. ook heb ik me font gezocht en die in me website gezet.
+
+Hoeveel tijd heeft me dat gekost? de workshop was ongeveer 1 uurtje, daarna zat ik ongeveer 3 uren aan mijn eigen werk. ik heb me masking kunnen toevoegen op mijn website.
+
+Wat heb ik geleerd? ik heb meer geleerd over de regels van typografie en hoe ik masking kan gebruiken binnen me website. Ook hoe ik de math random kan gebruiken om een random persoon te halen uit een api en die in me website te laten verschijnen (het was een opfrisser)
+
+Wat ga ik morgen doen? Morgen ga ik me website compleet maken mbt details, en kijken als ik aan alle eisen heb voldaan.
+
+bronnen;
+- https://tenor.com/view/suriname-flag-gif-south-america-gif-27458138 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/-webkit-text-stroke
+- https://fonts.google.com/selection/embed
+- https://codepen.io/pierrinho/pen/NEYmLO
+

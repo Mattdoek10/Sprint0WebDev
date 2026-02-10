@@ -3,6 +3,31 @@
     box-sizing: border-box;
 }
 
+
+:root {
+
+    --h1-color: black;
+    --h2-color: black;
+    --pcolor:#2d2d2d;
+    --background-color:#d7d7d7;
+    --section-color: antiquewhite;
+    --stroke-color: black;
+    --stroke-color-h1: transparent;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --h1-color: white;
+        --h2-color: white;
+        --pcolor:white;
+        --background-color:#424242;
+        --section-color: black;
+        --stroke-color: white;
+        --stroke-color-h1: white;
+    }
+}
+
+
 .archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
@@ -15,10 +40,12 @@ img {
 }
 
 h1 {
-    font-size: 7rem;
     font-weight: 700;
     text-align: center;
-    color: black;
+    color: var(--h1-color);
+    font-size: 8vw;
+    -webkit-text-stroke: 0.2px var(--stroke-color-h1);
+    
     
     @supports (background-clip:text) or (-webkit-background-clip:text) {
       color: transparent;
@@ -36,21 +63,26 @@ h1, h2 {
 
 h2{
     font-size: 1.4em;
+    color: var(--h2-color);
+}
+
+p {
+    color: var(--pcolor);
+}
+
+h3 {
+    color: var(--pcolor);
 }
 
 main{
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
+    background-color: var(--background-color);
 }
 
 main section:nth-of-type(1) {
     text-align: center;
-}
-
-main section h1{
-    text-align: center;
-    font-size: 8vw;
 }
 
 main svg{
@@ -74,13 +106,13 @@ main svg{
 
 .onClickhover-district {
     fill: var(--hover-color);
-    stroke: black;
+    stroke: var(--stroke-color);
     stroke-width: 3px;
     /* transform: scale(1.15); */
 }
 
 main section:nth-of-type(1) path:hover{
-    stroke: black;
+    stroke: var(--stroke-color);
     stroke-width: 5px;
 }
 
@@ -88,7 +120,7 @@ main section:nth-of-type(2) {
     display: flex;
     flex-direction: column;
     align-items: left;
-    background-color: antiquewhite;
+    background-color: var(--section-color);
     border-radius: 1em;
     margin-top: 2em;
     padding: 1em 1em;
@@ -127,4 +159,44 @@ main section:nth-of-type(2) ul li{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* ====== Tablet ====== */
+@media (min-width: 768px) {
+  body {
+    /* tablet styles */
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main svg{
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+
+  main section:nth-of-type(2) {
+    margin: 1em;
+
+  }
+}
+
+
+/* ====== Desktop ====== */
+@media (min-width: 1024px) {
+  body {
+    /* desktop styles */
+  }
+}
+
+
+/* ====== Grote desktop  ====== */
+@media (min-width: 1440px) {
+  body {
+    /* large desktop styles */
+  }
 }
