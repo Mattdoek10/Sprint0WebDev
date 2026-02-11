@@ -2,13 +2,13 @@
 
 const titel = document.querySelector("h1")
 
-tekstInvoegen()
 
-async function tekstInvoegen (){
-  const URL = "https://fdnd.directus.app/items/person/309"
-  let response = await fetch(URL)
-  let gegevensPersonen = await response.json()
-  titel.textContent = gegevensPersonen.data.name
+
+async function tekstInvoegen() {
+    const URL = "https://fdnd.directus.app/items/person/309"
+    let response = await fetch(URL)
+    let gegevensPersonen = await response.json()
+    titel.textContent = gegevensPersonen.data.name
 }
 
 
@@ -28,6 +28,8 @@ const infoTekst = document.querySelector(".info-text");
 const infoTitle = document.querySelector(".info-title");
 const infoImg = document.querySelector(".info-img");
 const infoUL = document.querySelector(".info-panel ul");
+const gebieden = document.querySelectorAll("svg path");
+
 
 
 SRSI.addEventListener("click", toonSipaliwini);
@@ -44,7 +46,7 @@ SRBR.addEventListener("click", toonBrokopondo);
 function toonSipaliwini() {
     infoTitle.innerHTML = "Mijn Gegevens";
     infoTekst.innerHTML = "Ik ben Matthew, 22 jaar, woonachtig in Amsterdam, Noord-Holland. Ik ben een beginnende UX/UI-designer en front-end developer met passie voor interactieve interfaces."
-    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4" ;
+    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4";
     infoUL.innerHTML = "<li></li>"
 }
 
@@ -58,7 +60,7 @@ function toonNickerie() {
 function toonMarowijne() {
     infoTitle.innerHTML = "Mijn Gegevens";
     infoTekst.innerHTML = "Ik ben Matthew, 22 jaar, woonachtig in Amsterdam, Noord-Holland. Ik ben een beginnende UX/UI-designer en front-end developer met passie voor interactieve interfaces."
-    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4" ;
+    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4";
     infoUL.innerHTML = "<li></li>"
 }
 
@@ -86,7 +88,7 @@ function toonWanica() {
 function toonParamaribo() {
     infoTitle.innerHTML = "Mijn Gegevens";
     infoTekst.innerHTML = "Ik ben Matthew, 22 jaar, woonachtig in Amsterdam, Noord-Holland. Ik ben een beginnende UX/UI-designer en front-end developer met passie voor interactieve interfaces."
-    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4" ;
+    infoImg.src = "https://avatars.githubusercontent.com/u/152287577?v=4";
     infoUL.innerHTML = "<li></li>"
 }
 
@@ -95,7 +97,7 @@ function toonCommewijne() {
     infoTitle.innerHTML = "Mijn hobbies";
     infoTekst.innerHTML = "Mijn hobbies zijn gamen, reizen, koken en muziek luisteren. Ik geniet ervan om nieuwe culturen te ontdekken en mijn creativiteit te uiten door middel van design en development.";
     infoUL.innerHTML = "<li><img src=\"https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg\" alt=\"foto van console\"></li><li><img src=\"https://www.globaljobbing.nl/wp-content/uploads/2024/11/reizen-1024x683.webp\" alt=\"foto van reisen\"></li><li><img src=https://cvofocus.be/wp-content/uploads/2019/05/koken-12.jpg alt=\"foto van koken\"></li><li><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BdjaPumQC-Wg3MPMf9L2V1zQNQk-IXf9mg&s alt=\"foto van muziek\"></li>";
-    
+
 }
 
 function toonPara() {
@@ -104,8 +106,7 @@ function toonPara() {
     infoTitle.innerHTML = "Mijn hobbies";
     infoTekst.innerHTML = "Mijn hobbies zijn gamen, reizen, koken en muziek luisteren. Ik geniet ervan om nieuwe culturen te ontdekken en mijn creativiteit te uiten door middel van design en development.";
     infoUL.innerHTML = "<li><img src=\"https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg\" alt=\"foto van console\"></li><li><img src=\"https://www.globaljobbing.nl/wp-content/uploads/2024/11/reizen-1024x683.webp\" alt=\"foto van reisen\"></li><li><img src=https://cvofocus.be/wp-content/uploads/2019/05/koken-12.jpg alt=\"foto van koken\"></li><li><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1BdjaPumQC-Wg3MPMf9L2V1zQNQk-IXf9mg&s alt=\"foto van muziek\"></li>";
-    
-    // infoImg.src = "https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg";
+
 }
 
 function toonBrokopondo() {
@@ -132,6 +133,10 @@ async function loadOneStudent(url) {
         let eenMinorMens = deMinorMensen[randomPersoon]
         console.log(eenMinorMens)
 
+        if (eenMinorMens.avatar === null || eenMinorMens.avatar === undefined) {
+            eenMinorMens.avatar = "https://www.thetombomb.com/images/ForPosts/null.png"
+        }
+
         let minorMensenHTML = `
         <li>
             <h3>${eenMinorMens.name}</h3>
@@ -142,17 +147,13 @@ async function loadOneStudent(url) {
 }
 
 
-// Zoek alle gebieden (paths) in de SVG
-const gebieden = document.querySelectorAll("svg path");
-
 // Loop door elk gebied heen
-gebieden.forEach(function(gebied) {
+gebieden.forEach(function (gebied) {
 
-    // Wacht tot er op een gebied wordt geklikt
-    gebied.addEventListener("click", function() {
+    gebied.addEventListener("click", function () {
 
         // Verwijder de actieve klasse van alle gebieden
-        gebieden.forEach(function(gebied) {
+        gebieden.forEach(function (gebied) {
             gebied.classList.remove("onClickhover-district");
         });
 
@@ -162,3 +163,21 @@ gebieden.forEach(function(gebied) {
 
 });
 
+tekstInvoegen()
+
+// Volg de muis en zet de x- en y-coördinaten in CSS-variabelen
+// Niet eigen code bron: https://dev.to/mattmarquise/how-to-create-a-custom-circular-cursor-for-your-website-4i7p
+document.body.onmousemove = function (e) {
+    document.documentElement.style.setProperty(
+        '--x', (
+            e.clientX + window.scrollX
+        )
+    + 'px'
+    );
+    document.documentElement.style.setProperty(
+        '--y', (
+            e.clientY + window.scrollY
+        )
+    + 'px'
+    );
+}

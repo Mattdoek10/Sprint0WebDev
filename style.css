@@ -1,6 +1,6 @@
-
 * {
     box-sizing: border-box;
+    cursor: none;
 }
 
 
@@ -8,19 +8,19 @@
 
     --h1-color: black;
     --h2-color: black;
-    --pcolor:#2d2d2d;
-    --background-color:#d7d7d7;
+    --pcolor: #2d2d2d;
+    --background-color: #d7d7d7;
     --section-color: antiquewhite;
     --stroke-color: black;
     --stroke-color-h1: transparent;
 }
 
-@media (prefers-color-scheme: dark){
-    :root{
+@media (prefers-color-scheme: dark) {
+    :root {
         --h1-color: white;
         --h2-color: white;
-        --pcolor:white;
-        --background-color:#424242;
+        --pcolor: white;
+        --background-color: #424242;
         --section-color: black;
         --stroke-color: white;
         --stroke-color-h1: white;
@@ -29,11 +29,23 @@
 
 
 .archivo-black-regular {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
+#invertedcursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none; 
+}
 
 img {
     max-width: 100%;
@@ -45,23 +57,24 @@ h1 {
     color: var(--h1-color);
     font-size: 8vw;
     -webkit-text-stroke: 0.2px var(--stroke-color-h1);
-    
-    
+
+
     @supports (background-clip:text) or (-webkit-background-clip:text) {
-      color: transparent;
-      -webkit-background-clip: text;
-      background-image: url(https://media1.tenor.com/m/-8jBbL3jwAEAAAAd/suriname-flag-gif.gif);
-      background-size: 10% auto;
-      background-position: center;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-image: url(https://media1.tenor.com/m/-8jBbL3jwAEAAAAd/suriname-flag-gif.gif);
+        background-size: 10% auto;
+        background-position: center;
     }
-  }
+}
 
 
-h1, h2 {
+h1,
+h2 {
     font-family: "Archivo Black", sans-serif;
 }
 
-h2{
+h2 {
     font-size: 1.4em;
     color: var(--h2-color);
 }
@@ -74,7 +87,7 @@ h3 {
     color: var(--pcolor);
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
@@ -85,10 +98,11 @@ main section:nth-of-type(1) {
     text-align: center;
 }
 
-main svg{
+main svg {
     width: 50%;
     height: auto;
     fill: grey;
+
     * {
         transform-box: fill-box;
         transform-origin: center;
@@ -111,7 +125,7 @@ main svg{
     /* transform: scale(1.15); */
 }
 
-main section:nth-of-type(1) path:hover{
+main section:nth-of-type(1) path:hover {
     stroke: var(--stroke-color);
     stroke-width: 5px;
 }
@@ -139,7 +153,7 @@ main section:nth-of-type(2) {
     align-items: center;
 }
 
-main section:nth-of-type(2) ul{
+main section:nth-of-type(2) ul {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -147,56 +161,74 @@ main section:nth-of-type(2) ul{
     gap: 1em;
 }
 
-main section:nth-of-type(2) ul img{
+main section:nth-of-type(2) ul img {
     width: 10em;
     height: 10em;
     border-radius: 0.3em;
-    object-fit: cover; /* Belangrijkste eigenschap: vult de box */
-    object-position: center; /* Zorgt dat het midden van de afbeelding wordt getoond */
+    object-fit: cover;
+    /* Belangrijkste eigenschap: vult de box */
+    object-position: center;
+    /* Zorgt dat het midden van de afbeelding wordt getoond */
 }
 
-main section:nth-of-type(2) ul li{
+main section:nth-of-type(2) ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* bron: https://codepen.io/shooft/pen/xbOqWQY?editors=0110 */
+
+  animation:--jump-jump-animation .1s ease-in-out alternate infinite paused;
+
+  &:nth-of-type(1) { animation-delay:.0s; }
+  &:nth-of-type(2) { animation-delay:.05s; }
+  &:nth-of-type(3) { animation-delay:.025s; }
+  &:nth-of-type(4) { animation-delay:.075s; }   
+    animation-play-state:running; 
 }
+
+@keyframes --jump-jump-animation {
+  100% {
+    translate:0 .2em;
+  }
+}  
 
 /* ====== Tablet ====== */
 @media (min-width: 768px) {
-  body {
-    /* tablet styles */
-  }
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+    body {
+        /* tablet styles */
+    }
 
-  main svg{
-    width: 100%;
-  }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-  h1 {
-    font-size: 5vw;
-  }
+    main svg {
+        width: 100%;
+        height: 70vh;
+    }
 
-  main section:nth-of-type(2) {
-    margin: 1em;
+    h1 {
+        font-size: 5vw;
+    }
 
-  }
-}
+    main section:nth-of-type(2) {
+        margin: 1em;
 
+    }
 
-/* ====== Desktop ====== */
-@media (min-width: 1024px) {
-  body {
-    /* desktop styles */
-  }
-}
+    #invertedcursor {
+    width: 40px;
+    height: 40px;
+    }
 
+    main section:nth-of-type(2) ul li:nth-of-type(1) img,
+    main section:nth-of-type(2) ul li:nth-of-type(2) img,
+    main section:nth-of-type(2) ul li:nth-of-type(3) img,
+    main section:nth-of-type(2) ul li:nth-of-type(4) img {
+        width: 15em;
+        height: 15em;
 
-/* ====== Grote desktop  ====== */
-@media (min-width: 1440px) {
-  body {
-    /* large desktop styles */
-  }
+    }
 }
